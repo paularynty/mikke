@@ -1,0 +1,30 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  flex-wrap: wrap;
+  z-index: 1;
+  background-color: #222222;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #888888;
+  padding: 20px;
+}
+
+#header a:hover {
+  color: #000000;
+}
+
+.headerContentRight a {
+  margin-inline-end: 1.5rem;
+}
+
+#headerContentRight a:last-child {
+  margin-inline-end: 0;
+}
+
+.link {
+  color: #888888;
+  text-decoration: none;
+}

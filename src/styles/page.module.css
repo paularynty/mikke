@@ -1,0 +1,79 @@
+.app {
+  background-color: var(--background-color);
+}
+
+.intro {
+  text-align: left;
+  padding: 0px 30px 0px 30px;
+}
+
+.intro p {
+  margin: 0px;
+}
+
+.sectionWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background-color: var(--background-color);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-family: "Instrument Serif", italic;
+}
+
+.sectionWrapper p {
+  margin: 0;
+}
+
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  font-family: "Inter", sans-serif;
+  color: #888888;
+  padding-bottom: 20px;
+}
+
+.contact p {
+  margin: 0 auto;
+}
+
+.bodyText {
+  font-family: "Inter", sans-serif;
+  color: var(--text-color);
+  padding-bottom: 20px;
+}
+
+.bodyText p {
+  margin: 0px auto;
+}
+
+.footer {
+  display: flex;
+  background-color: #222222;
+  font-family: "Inter", sans-serif;
+  color: #f7f7f7;
+  padding: 20px;
+  justify-content: left;
+}
+
+.footer p {
+  margin: 0;
+}
+
+.button {
+  border-style: none;
+  border-radius: var(--border-radius-medium);
+  width: 6rem;
+  padding: 0.5rem;
+  background-color: rebeccapurple;
+  color: var (--text-color);
+  font-family: "Mochiy Pop One", normal;
+}
+
+.list {
+  list-style-type: none;
+  padding-inline-start: 0;
+}
