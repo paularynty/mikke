@@ -1,4 +1,4 @@
-import styles from "./project.module.css";
+import projectStyles from "@/styles/project.module.css";
 
 export const Project = (elements: {
   name: string;
@@ -6,13 +6,15 @@ export const Project = (elements: {
   image_path?: string;
 }) => {
   const { name, description, image_path } = elements;
+  const { projectSubcontainer, projectImage, projectDescription } =
+    projectStyles;
   const projectPath = `/project/${name.replace(/\s+/g, "-").toLowerCase()}`;
   return (
-    <div className={styles.projectSubcontainer}>
-      <div className={styles.projectImage}>
+    <div className={projectSubcontainer}>
+      <div className={projectImage}>
         <img src={image_path} alt="Project"></img>
       </div>
-      <div className={styles.projectDescription}>
+      <div className={projectDescription}>
         <h1>
           <a href={projectPath}>{name}</a>
         </h1>

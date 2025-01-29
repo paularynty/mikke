@@ -66,8 +66,8 @@
 .button {
   border-style: none;
   border-radius: var(--border-radius-medium);
-  width: 6rem;
-  padding: 0.5rem;
+  width: max-content;
+  padding: 0.7rem;
   background-color: rebeccapurple;
   color: var (--text-color);
   font-family: "Mochiy Pop One", normal;
@@ -76,4 +76,25 @@
 .list {
   list-style-type: none;
   padding-inline-start: 0;
+}
+
+.gridContainer {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.gridItem {
+  background-color: #fffaef;
+  color: #15152c;
+  padding: 0.6rem;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  font-size: 6rem;
+  font-family: "Mochiy Pop One", sans-serif;
+  max-width: 8rem;
+  cursor: pointer;
 }

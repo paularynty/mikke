@@ -1,4 +1,5 @@
 "use client";
+
 import "./globals.css";
 import { ThemeProvider } from "@/ui/ThemeProvider";
 import { Instrument_Serif, Inter, Mochiy_Pop_One } from "next/font/google";

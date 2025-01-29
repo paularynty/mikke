@@ -1,7 +1,7 @@
-import styles from "./header.module.css";
+import headerStyles from "@/styles/header.module.css";
 
 export const Header = () => {
-  const { header, link, headerContentRight } = styles;
+  const { header, link, headerContentRight } = headerStyles;
   return (
     <header className={header}>
       <a className="link" href="/">
