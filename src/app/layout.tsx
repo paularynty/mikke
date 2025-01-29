@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/ui/ThemeProvider";
 import { Instrument_Serif, Inter, Mochiy_Pop_One } from "next/font/google";
 import { Header, Footer } from "@/components";
+import { ErrorProvider } from "@/hooks/useError";
 
 const instrumentSerif = Instrument_Serif({
   preload: true,
@@ -37,17 +38,19 @@ export default function RootLayout({
       <body
         className={`${instrumentSerif} ${inter} ${mochiyPopOne} antialiased`}
       >
-        <ThemeProvider
-          defaultTheme="system"
-          attribute="class"
-          enableSystem
-          disableTransitionOnChange
-          themes={["light", "dark"]}
-        >
-          <Header />
-          <main>{children}</main>
-          <Footer />
-        </ThemeProvider>
+        <ErrorProvider>
+          <ThemeProvider
+            defaultTheme="system"
+            attribute="class"
+            enableSystem
+            disableTransitionOnChange
+            themes={["light", "dark"]}
+          >
+            <Header />
+            <main>{children}</main>
+            <Footer />
+          </ThemeProvider>
+        </ErrorProvider>
       </body>
     </html>
   );

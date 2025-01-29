@@ -16,7 +16,6 @@ export default async function fetchKanjiList(): Promise<KanjiData[]> {
     if (!response.ok) {
       throw new Error(`Error fetching data: ${response.statusText}`);
     }
-
     const data = await response.json();
 
     if (!Array.isArray(data)) {
