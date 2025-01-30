@@ -16,11 +16,7 @@ export interface InputProps {
   onSubmit: (event: React.FormEvent<HTMLFormElement>) => Promise<void>;
 }
 
-const KanjiSearchPage: React.FC<InputProps> = ({
-  input,
-  setInput,
-  onSubmit,
-}) => {
+const KanjiSearch: React.FC<InputProps> = ({ input, setInput, onSubmit }) => {
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { id, value } = e.target;
     setInput((prev) => ({ ...prev, [id]: value }));
@@ -68,4 +64,4 @@ const KanjiSearchPage: React.FC<InputProps> = ({
   );
 };
 
-export default KanjiSearchPage;
+export default KanjiSearch;
