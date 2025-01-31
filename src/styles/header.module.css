@@ -4,23 +4,28 @@
   position: sticky;
   flex-wrap: wrap;
   z-index: 1;
-  background-color: #222222;
+  background-color: var(--background-color-secondary);
   font-family: "Inter", sans-serif;
   font-size: 14px;
   font-weight: 500;
-  color: #888888;
+  color: var(--text-color);
   padding: 20px;
 }
 
-#header a:hover {
-  color: #000000;
+.header a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.header a:hover {
+  color: palevioletred;
 }
 
 .headerContentRight a {
   margin-inline-end: 1.5rem;
 }
 
-#headerContentRight a:last-child {
+.headerContentRight a:last-child {
   margin-inline-end: 0;
 }
 

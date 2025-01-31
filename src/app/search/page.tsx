@@ -8,7 +8,6 @@ import {
 import { useState, useEffect } from "react";
 import { fetchKanjiSearchResults } from "@/lib/kanjiSearch";
 import { useError } from "@/hooks/useError";
-import styles from "@/styles/page.module.css";
 import { KanjiSearchResult } from "@/components/KanjiSearch/KanjiSearchResult";
 
 export default function KanjiSearchPage() {

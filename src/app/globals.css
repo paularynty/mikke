@@ -1,4 +1,5 @@
 :root {
+  --border-radius-small: 0.3rem;
   --border-radius-medium: 0.6rem;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -12,17 +13,23 @@
 } */
 
 html.light {
-  --background-color: #fff;
-  --text-color: #000;
+  --background-color: #f0e9d8;
+  --background-color-secondary: #fffaef;
+  --text-color-secondary: #15152c;
+  --text-color: #12101e;
 }
 
 html.dark {
-  --background-color: #000;
-  --text-color: #fff;
+  --background-color: #12101e;
+  --background-color-secondary: #15152c;
+  --text-color-secondary: #fffaef;
+  --text-color: #fffaef;
 }
 
 html,
 body {
+  background-color: var(--background-color);
+  color: var(--text-color);
   margin: 0;
   display: flex;
   flex-direction: column;

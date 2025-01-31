@@ -27,15 +27,20 @@ const KanjiSearch: React.FC<InputProps> = ({ input, setInput, onSubmit }) => {
       <div className={styles.intro}>
         <h1>Search kanji by English word</h1>
         <form onSubmit={onSubmit} aria-label="Kanji search field">
-          <input
-            id="word"
-            type="string"
-            placeholder="Enter English word"
-            value={input.word}
-            onChange={handleInputChange} // Update state on input change
-            required
-          />
-          <button type="submit">Search</button>
+          <div className={styles.inputContainer}>
+            <input
+              id="word"
+              type="string"
+              className={styles.input}
+              placeholder="Enter English word"
+              value={input.word}
+              onChange={handleInputChange} // Update state on input change
+              required
+            />
+            <button type="submit" className={styles.button}>
+              Search
+            </button>
+          </div>
         </form>
       </div>
       {/* {hasSearched && (
