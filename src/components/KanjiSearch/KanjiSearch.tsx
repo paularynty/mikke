@@ -23,49 +23,25 @@ const KanjiSearch: React.FC<InputProps> = ({ input, setInput, onSubmit }) => {
   };
 
   return (
-    <>
-      <div className={styles.intro}>
-        <h1>Search kanji by English word</h1>
-        <form onSubmit={onSubmit} aria-label="Kanji search field">
-          <div className={styles.inputContainer}>
-            <input
-              id="word"
-              type="string"
-              className={styles.input}
-              placeholder="Enter English word"
-              value={input.word}
-              onChange={handleInputChange} // Update state on input change
-              required
-            />
-            <button type="submit" className={styles.button}>
-              Search
-            </button>
-          </div>
-        </form>
-      </div>
-      {/* {hasSearched && (
-        <>
-          <h2>Search results</h2>
-          <div className="result">
-            <div className={styles.gridContainer}>
-              {kanjiResults.length > 0 ? (
-                kanjiResults.map((kanji, index) => (
-                  <div
-                    className={styles.gridItem}
-                    key={index}
-                    onClick={() => (window.location.href = `/kanji/${kanji}`)}
-                  >
-                    {kanji}
-                  </div>
-                ))
-              ) : (
-                <div>No kanji found.</div>
-              )}
-            </div>
-          </div>
-        </>
-      )} */}
-    </>
+    <div className={styles.intro}>
+      <h1>Search kanji by English word</h1>
+      <form onSubmit={onSubmit} aria-label="Kanji search field">
+        <div className={styles.inputContainer}>
+          <input
+            id="word"
+            type="string"
+            className={styles.input}
+            placeholder="Enter English word"
+            value={input.word}
+            onChange={handleInputChange}
+            required
+          />
+          <button type="submit" className={styles.button}>
+            Search
+          </button>
+        </div>
+      </form>
+    </div>
   );
 };
 

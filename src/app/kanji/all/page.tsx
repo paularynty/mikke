@@ -2,7 +2,7 @@
 
 import { KanjiList } from "@/components/KanjiList/KanjiList";
 
-export default function KanjiListPage() {
+export default function AllKanjiPage() {
   return (
     <>
       <p>all</p>

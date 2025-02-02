@@ -1,7 +1,6 @@
 "use client";
 import { useRouter } from "next/navigation";
 import styles from "@/styles/page.module.css";
-import { useEffect } from "react";
 
 // export default function App({ Component, pageProps }: AppProps) {
 //   const router = useRouter();
@@ -18,12 +17,12 @@ import { useEffect } from "react";
 
 // import { KanjiList } from "../../components/KanjiList/KanjiList";
 
-export default function Home() {
+export const handleClick = (path: string) => {
   const router = useRouter();
+  router.push(path);
+};
 
-  const handleClick = () => {
-    router.push("/search");
-  };
+export default function Home() {
   return (
     <div>
       <div className={styles.intro}>
@@ -47,7 +46,7 @@ export default function Home() {
           type="button"
           className={styles.button}
           aria-label="Navigate to Kanji search"
-          onClick={handleClick}
+          onClick={() => handleClick("/search")}
         >
           Check it out
         </button>

@@ -1,4 +1,4 @@
-export const fetchKanjiDetails = async (character: string) => {
+export const fetchKanjiEntry = async (character: string) => {
   try {
     const response = await fetch(
       `https://kanjialive-api.p.rapidapi.com/api/public/kanji/${encodeURIComponent(
@@ -16,10 +16,10 @@ export const fetchKanjiDetails = async (character: string) => {
     if (!response.ok) {
       throw new Error(`Error fetching data: ${response.statusText}`);
     }
-    const data = await response.json();
-    return data;
+    const result = await response.json();
+    return result;
   } catch (error) {
-    console.error("Error fetching Kanji details:", error);
+    console.error("Error fetching Kanji entry:", error);
     throw error;
   }
 };
