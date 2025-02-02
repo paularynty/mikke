@@ -24,7 +24,6 @@ export const fetchKanjiSearchResults = async (word: string) => {
 
     const results = data.map(({ kanji }: any) => ({
       kanji: kanji.character,
-      // radical: radical.character,
     }));
 
     console.log("data:", results);

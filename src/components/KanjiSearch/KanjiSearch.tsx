@@ -1,20 +1,6 @@
 import styles from "@/styles/page.module.css";
+import { InputProps } from "@/utils/types";
 import React from "react";
-
-export type Input = {
-  word: string;
-};
-
-export interface KanjiSearchResults {
-  kanji: string;
-  radical: string;
-}
-
-export interface InputProps {
-  input: Input;
-  setInput: React.Dispatch<React.SetStateAction<Input>>;
-  onSubmit: (event: React.FormEvent<HTMLFormElement>) => Promise<void>;
-}
 
 const KanjiSearch: React.FC<InputProps> = ({ input, setInput, onSubmit }) => {
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {

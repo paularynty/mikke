@@ -1,14 +1,11 @@
 "use client";
 
 import KanjiSearch from "@/components/KanjiSearch/KanjiSearch";
-import {
-  Input,
-  KanjiSearchResults,
-} from "@/components/KanjiSearch/KanjiSearch";
-import { useState, useEffect } from "react";
-import { fetchKanjiSearchResults } from "@/lib/kanjiSearch";
-import { useError } from "@/hooks/useError";
 import { KanjiSearchResult } from "@/components/KanjiSearch/KanjiSearchResult";
+import { Input, KanjiSearchResults } from "@/utils/types";
+import { fetchKanjiSearchResults } from "@/lib/kanjiSearch";
+import { useState, useEffect } from "react";
+import { useError } from "@/hooks/useError";
 
 export default function KanjiSearchPage() {
   const [data, setData] = useState<KanjiSearchResults | null>(null);

@@ -17,12 +17,13 @@ import styles from "@/styles/page.module.css";
 
 // import { KanjiList } from "../../components/KanjiList/KanjiList";
 
-export const handleClick = (path: string) => {
-  const router = useRouter();
-  router.push(path);
-};
-
 export default function Home() {
+  const router = useRouter();
+
+  const handleClick = (path: string) => {
+    router.push(path);
+  };
+
   return (
     <div>
       <div className={styles.intro}>

@@ -1,3 +1,5 @@
+"use client";
+import { useRouter } from "next/navigation";
 import styles from "@/styles/page.module.css";
 
 interface SearchResultsProps {
@@ -5,6 +7,7 @@ interface SearchResultsProps {
 }
 
 export const KanjiSearchResult: React.FC<SearchResultsProps> = ({ data }) => {
+  const router = useRouter();
   return (
     <>
       <h2>Search results</h2>
@@ -15,7 +18,7 @@ export const KanjiSearchResult: React.FC<SearchResultsProps> = ({ data }) => {
               <div
                 className={styles.gridItem}
                 key={index}
-                onClick={() => (window.location.href = `/kanji/${kanji}`)}
+                onClick={() => router.push(`/kanji/${kanji}`)}
               >
                 {kanji}
               </div>

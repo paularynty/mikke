@@ -1,28 +1,19 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { useRouter } from "next/navigation";
 import styles from "@/styles/page.module.css";
-import { fetchKanjiEntry } from "@/lib/kanjiEntry";
+import fetchKanjiEntry from "@/lib/kanjiEntry";
 
 export const KanjiEntry = () => {
   const [kanjiData, setKanjiData] = useState(null); // State to hold kanji data
   const [loading, setLoading] = useState(true); // Loading state
   const [error, setError] = useState(null); // Error state
-  const router = useRouter();
-  const { character } = router.query;
 
   useEffect(() => {
-    if (!character) return; // Wait until the character is available
-
     const fetchKanjiData = async () => {
       try {
-        const response = await fetchKanjiEntry(
-          `${encodeURIComponent(character as string)}`
-        );
-        // (
-        //   `/api/kanjiDetails/${encodeURIComponent(character as string)}`
-        // );
+        console.log("we go here");
+        const response = await fetchKanjiEntry(character as string);
         const data = await response.json();
         setKanjiData(data);
       } catch (error) {
@@ -34,7 +25,7 @@ export const KanjiEntry = () => {
     };
 
     fetchKanjiData();
-  }, [character]);
+  }, []);
 
   if (loading) {
     return <div>Loading...</div>;
