@@ -18,7 +18,6 @@ export default function KanjiSearchPage() {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    console.log("input:", input.word);
     setStatus("loading");
     setErrorMessage("");
 
