@@ -1,12 +1,13 @@
 import headerStyles from "@/styles/header.module.css";
+import Link from "next/link";
 
 export const Header = () => {
   const { header, link, headerContentRight } = headerStyles;
   return (
     <header className={header}>
-      <a className="link" href="/">
+      <Link className="link" href="/">
         Mikke!
-      </a>
+      </Link>
       <div className={headerContentRight}>
         <a className={link} href="/search">
           Search

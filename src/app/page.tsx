@@ -30,8 +30,8 @@ export default function Home() {
         <h1>Mikke!</h1>
         <div className={styles.bodyText}>
           <p>
-            Mikke! (Japanese for "Found it!") is a quick, low-threshold tool for
-            Japanese language learners.
+            Mikke! (Japanese for <i>Found it!</i>) is a quick, low-threshold
+            tool for Japanese language learners.
           </p>
           <ul className={styles.list}>
             <li>🔍 Look up individual kanji by English meaning</li>

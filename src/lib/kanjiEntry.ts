@@ -1,5 +1,3 @@
-import { KanjiData } from "@/utils/types";
-
 // export const fetchKanjiEntry = async (character: string) => {
 export const fetchKanjiEntry = async (character: string) => {
   try {
