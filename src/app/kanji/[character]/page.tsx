@@ -6,7 +6,11 @@ export default async function KanjiPage({
 }: {
   params: { character: string };
 }) {
-  const kanjiDataArray = await fetchKanjiEntry(params.character);
+  console.log("param:", params.character);
+  const decoded = decodeURIComponent(params.character); // Decode the kanji character
+  console.log("param:", decoded);
+
+  const kanjiDataArray = await fetchKanjiEntry(decoded);
 
   if (!kanjiDataArray || kanjiDataArray.length === 0) {
     return <div className={styles.card}>No data available for this kanji.</div>;

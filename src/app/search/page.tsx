@@ -4,6 +4,7 @@ import KanjiSearch from "@/components/KanjiSearch/KanjiSearch";
 import { KanjiSearchResult } from "@/components/KanjiSearch/KanjiSearchResult";
 import { Input, KanjiSearchResults } from "@/utils/types";
 import { fetchKanjiSearchResults } from "@/lib/kanjiSearch";
+import styles from "@/styles/page.module.css";
 import { useState, useEffect } from "react";
 import { useError } from "@/hooks/useError";
 
@@ -47,11 +48,13 @@ export default function KanjiSearchPage() {
           onSubmit={handleSubmit}
         />
       </div>
-      {status === "loading" && <div>Loading...</div>}
+      {status === "loading" && <p className={styles.loading}>Loading...</p>}
 
       {status === "success" && data ? <KanjiSearchResult data={data} /> : null}
 
-      {status === "error" && <div>Error: No Kanji results found.</div>}
+      {status === "error" && (
+        <p className={styles.error}>No kanji found.</p>
+      )}
     </>
   );
 }

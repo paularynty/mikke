@@ -10,7 +10,7 @@ const KanjiSearch: React.FC<InputProps> = ({ input, setInput, onSubmit }) => {
 
   return (
     <div className={styles.intro}>
-      <h1>Search kanji by English word</h1>
+      <h1>Search kanji</h1>
       <form onSubmit={onSubmit} aria-label="Kanji search field">
         <div className={styles.inputContainer}>
           <input

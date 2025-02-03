@@ -1,12 +1,10 @@
 .header {
   display: flex;
   justify-content: space-between;
-  position: sticky;
   flex-wrap: wrap;
-  z-index: 1;
   background-color: var(--background-color-secondary);
   font-family: "Inter", sans-serif;
-  font-size: 14px;
+  font-size: 1rem;
   font-weight: 500;
   color: var(--text-color);
   padding: 20px;
@@ -18,7 +16,7 @@
 }
 
 .header a:hover {
-  color: palevioletred;
+  color: #9639a8;
 }
 
 .headerContentRight a {
@@ -27,9 +25,4 @@
 
 .headerContentRight a:last-child {
   margin-inline-end: 0;
-}
-
-.link {
-  color: #888888;
-  text-decoration: none;
 }

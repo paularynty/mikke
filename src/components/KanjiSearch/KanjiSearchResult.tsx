@@ -10,8 +10,8 @@ export const KanjiSearchResult: React.FC<SearchResultsProps> = ({ data }) => {
   const router = useRouter();
   return (
     <>
+      <div className={styles.intro}>
       <h2>Search results</h2>
-      <div className={styles.result}>
         <div className={styles.gridContainer}>
           {data.length > 0 ? (
             data.map(({ kanji }, index) => (

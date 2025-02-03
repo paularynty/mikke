@@ -4,7 +4,7 @@
 
 .intro {
   text-align: left;
-  padding: 0px 30px 0px 30px;
+  /* padding: 0px 30px 0px 30px; */
 }
 
 .intro p {
@@ -50,19 +50,6 @@
   margin: 0px auto;
 }
 
-.footer {
-  display: flex;
-  background-color: var(--background-color-secondary);
-  font-family: "Inter", sans-serif;
-  color: var(--text-color);
-  padding: 20px;
-  justify-content: left;
-}
-
-.footer p {
-  margin: 0;
-}
-
 .inputContainer {
   width: max-content;
   height: 3rem;
@@ -72,14 +59,15 @@
 }
 
 .input {
-  width: 100%;
   height: 70%;
+  font-family: "Inter", sans-serif;
+  font-size: inherit;
   border-start-start-radius: var(--border-radius-small);
   border-end-start-radius: var(--border-radius-small);
   border-width: 0.1rem;
   margin: 0;
   padding: 0.2rem 0.5rem;
-  border: 2px solid rebeccapurple;
+  border: 0.1rem solid #9639a8;
 }
 
 .button {
@@ -90,7 +78,7 @@
   width: max-content;
   height: fit-content;
   padding: 0.8rem;
-  background-color: rebeccapurple;
+  background-color: #9639a8;
   color: #fffaef;
   font-family: "Mochiy Pop One", normal;
   cursor: pointer;
@@ -103,11 +91,10 @@
 }
 
 .gridContainer {
-  margin-top: 2rem;
+  margin-top: 3rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
   gap: 1rem;
-  padding: 1rem;
 }
 
 .gridItem {
@@ -121,4 +108,10 @@
   font-family: "Mochiy Pop One", sans-serif;
   max-width: 8rem;
   cursor: pointer;
+}
+
+.loading,
+.error {
+  font-size: 1rem;
+  margin: 2rem 0;
 }

@@ -1,10 +1,20 @@
+// export type KanjiData = {
+//   kanji: {
+//     character: string;
+//     strokes: number | null;
+//     onyomi: string;
+//     kunyomi: string;
+//     meaning: string;
+//   };
+// };
+
 export type KanjiData = {
   kanji: {
     character: string;
-    strokes: number | null;
-    onyomi: string;
-    kunyomi: string;
-    meaning: string;
+    onyomi: { romaji: string; katakana: string };
+    kunyomi: { romaji: string; hiragana: string };
+    meaning: { english: string };
+    strokes: { count: number | null };
   };
 };
 

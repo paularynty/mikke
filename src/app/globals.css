@@ -39,7 +39,27 @@ body {
   h1 {
     font-family: "Mochiy Pop One", normal;
     font-weight: inherit;
-    font-size: 44px;
+    font-size: 3rem;
+  }
+  h2 {
+    font-family: "Mochiy Pop One", normal;
+    font-weight: inherit;
+    font-size: 2rem;
+  }
+  h3 {
+    font-family: "Mochiy Pop One", normal;
+    font-weight: inherit;
+    font-size: 1.5rem;
+  }
+  p {
+    font-family: "Inter", sans-serif;
+    font-weight: inherit;
+  }
+
+  a {
+    text-decoration: underline;
+    text-transform: none;
+    color: inherit;
   }
 }
 
@@ -49,4 +69,5 @@ body {
 
 main {
   flex: 1;
+  padding: 0 2rem;
 }
