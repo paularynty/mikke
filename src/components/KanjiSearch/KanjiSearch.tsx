@@ -22,7 +22,7 @@ const KanjiSearch: React.FC<InputProps> = ({ input, setInput, onSubmit }) => {
             onChange={handleInputChange}
             required
           />
-          <button type="submit" className={styles.button}>
+          <button type="submit" className={styles.buttonSearch}>
             Search
           </button>
         </div>

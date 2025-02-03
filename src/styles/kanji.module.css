@@ -1,3 +1,31 @@
+.kanjiEntry {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background-color-secondary);
+  margin: 3rem;
+  width: 30%;
+  border-radius: var(--border-radius-medium);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  align-self: center;
+  padding: 2rem;
+}
+
+.kanjiResult {
+  text-align: start;
+  font-size: 6rem;
+  font-family: "Mochiy Pop One", sans-serif;
+  margin: 0;
+}
+
+.kanjiDetail {
+  margin: 1rem 0;
+}
+
+.kanjiInfo {
+  text-align: start;
+  margin: 0;
+}
+
 /* .projectContainer {
   align-content: center;
   align-items: center;

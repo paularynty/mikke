@@ -58,28 +58,3 @@ export default function KanjiSearchPage() {
     </>
   );
 }
-
-{
-  /* {hasSearched && (
-        <>
-          <h2>Search results</h2>
-          <div className="result">
-            <div className={styles.gridContainer}>
-              {kanjiResults.length > 0 ? (
-                kanjiResults.map((kanji, index) => (
-                  <div
-                    className={styles.gridItem}
-                    key={index}
-                    onClick={() => (window.location.href = `/kanji/${kanji}`)}
-                  >
-                    {kanji}
-                  </div>
-                ))
-              ) : (
-                <div>No kanji found.</div>
-              )}
-            </div>
-          </div>
-        </>
-      )} */
-}

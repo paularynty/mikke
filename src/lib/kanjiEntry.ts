@@ -25,22 +25,22 @@ export const fetchKanjiEntry = async (character: string) => {
     console.log("Fetch success");
 
     const kanjiData: KanjiData["kanji"] | undefined = data?.kanji;
-    const character: string = kanjiData?.character ?? "";
+    const kanjiCharacter: string = kanjiData?.character ?? "";
+    const onyomiKatakana: string = kanjiData?.onyomi?.katakana ?? "";
     const onyomiRomaji: string = kanjiData?.onyomi?.romaji ?? "";
-    const katakana: string = kanjiData?.onyomi?.katakana ?? "";
+    const kunyomiHiragana: string = kanjiData?.kunyomi?.hiragana ?? "";
     const kunyomiRomaji: string = kanjiData?.kunyomi?.romaji ?? "";
-    const hiragana: string = kanjiData?.kunyomi?.hiragana ?? "";
-    const english: string = kanjiData?.meaning?.english ?? "";
-    const count: number = kanjiData?.strokes?.count ?? 0;
+    const meaningEnglish: string = kanjiData?.meaning?.english ?? "";
+    const strokeCount: number = kanjiData?.strokes?.count ?? 0;
 
     return {
-      character,
+      kanjiCharacter,
       onyomiRomaji,
-      katakana,
+      onyomiKatakana,
+      kunyomiHiragana,
       kunyomiRomaji,
-      hiragana,
-      english,
-      count,
+      meaningEnglish,
+      strokeCount,
     };
     // console.log("Formatted data", kanjiData);
   } catch (error) {

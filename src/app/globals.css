@@ -51,11 +51,10 @@ body {
     font-weight: inherit;
     font-size: 1.5rem;
   }
-  p {
+  p, li {
     font-family: "Inter", sans-serif;
     font-weight: inherit;
   }
-
   a {
     text-decoration: underline;
     text-transform: none;

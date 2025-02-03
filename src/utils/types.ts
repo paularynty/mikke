@@ -24,7 +24,7 @@ export type Input = {
 
 export interface KanjiSearchResults {
   kanji: string;
-  radical: string;
+  // radical: string;
 }
 
 export interface InputProps {

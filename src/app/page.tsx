@@ -28,21 +28,19 @@ export default function Home() {
     <div>
       <div className={styles.intro}>
         <h1>Mikke!</h1>
-        <div className={styles.bodyText}>
-          <p>
-            Mikke! (Japanese for <i>Found it!</i>) is a quick, low-threshold
-            tool for Japanese language learners.
-          </p>
-          <ul className={styles.list}>
-            <li>🔍 Look up individual kanji by English meaning</li>
-            <li>
-              📘 Access detailed kanji information, including onyomi/kunyomi
-              reading and stroke order
-            </li>
-            <li>📝 View comprehensive kanji list</li>
-            <li>💡 Sort kanji list by stroke order</li>
-          </ul>
-        </div>
+        <p>
+          Mikke! (Japanese for <i>Found it!</i>) is a quick, low-threshold tool
+          for Japanese language learners.
+        </p>
+        <ul className={styles.list}>
+          <li>🔍 Look up individual kanji by English meaning</li>
+          <li>
+            📘 Access detailed kanji information, including onyomi/kunyomi
+            reading and stroke order
+          </li>
+          <li>📝 View comprehensive kanji list</li>
+          <li>💡 Sort kanji list by stroke order</li>
+        </ul>
         <button
           type="button"
           className={styles.button}

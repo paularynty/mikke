@@ -1,36 +1,30 @@
 import { fetchKanjiEntry } from "@/lib/kanjiEntry";
-import styles from "@/styles/page.module.css";
+import styles from "@/styles/kanji.module.css";
 
-export default async function KanjiPage({
-  params,
-}: {
-  params: { character: string };
+export default async function KanjiPage(props: {
+  params: Promise<{ character: string }>;
 }) {
+  const params = await props.params;
   console.log("param:", params.character);
   const decoded = decodeURIComponent(params.character); // Decode the kanji character
   console.log("param:", decoded);
 
-  const kanjiDataArray = await fetchKanjiEntry(decoded);
-
-  if (!kanjiDataArray || kanjiDataArray.length === 0) {
-    return <div className={styles.card}>No data available for this kanji.</div>;
-  }
-
-  const kanjiData = kanjiDataArray[0];
+  const kanjiData = await fetchKanjiEntry(decoded);
+  console.log("kanjiDataArray:", kanjiData);
 
   return (
-    <div className={styles.card}>
-      <div className={styles.kanjiDetail}>{kanjiData.kanji.character}</div>
-      <h2>Meaning</h2>
-      <div className={styles.result}>{kanjiData.kanji.meaning.english}</div>
-      <h2>Onyomi</h2>
-      <div className={styles.result}>{kanjiData.kanji.onyomi.katakana}</div>
-      <div className={styles.result}>{kanjiData.kanji.onyomi.romaji}</div>
-      <h2>Kunyomi</h2>
-      <div className={styles.result}>{kanjiData.kanji.kunyomi.hiragana}</div>
-      <div className={styles.result}>{kanjiData.kanji.kunyomi.romaji}</div>
-      <h2>Strokes</h2>
-      <div className={styles.result}>{kanjiData.kanji.strokes.count}</div>
+    <div className={styles.kanjiEntry}>
+      <h1 className={styles.kanjiResult}>{kanjiData.kanjiCharacter}</h1>
+      <h2 className={styles.kanjiDetail}>Meaning</h2>
+      <p className={styles.kanjiInfo}>{kanjiData.meaningEnglish}</p>
+      <h2 className={styles.kanjiDetail}>Onyomi</h2>
+      <p className={styles.kanjiInfo}>{kanjiData.onyomiKatakana}</p>
+      <p className={styles.kanjiInfo}>{kanjiData.onyomiRomaji}</p>
+      <h2 className={styles.kanjiDetail}>Kunyomi</h2>
+      <p className={styles.kanjiInfo}>{kanjiData.kunyomiHiragana}</p>
+      <p className={styles.kanjiInfo}>{kanjiData.kunyomiRomaji}</p>
+      <h2 className={styles.kanjiDetail}>Strokes</h2>
+      <p className={styles.kanjiInfo}>{kanjiData.strokeCount}</p>
     </div>
   );
 }
