@@ -1,17 +1,18 @@
 "use client";
+
 import { useRouter } from "next/navigation";
 import styles from "@/styles/page.module.css";
 
 interface SearchResultsProps {
-  data: { kanji: string; radical: string }[];
+  data: { kanji: string }[];
 }
 
 export const KanjiSearchResult: React.FC<SearchResultsProps> = ({ data }) => {
   const router = useRouter();
   return (
     <>
-      <div className={styles.intro}>
-      <h2>Search results</h2>
+      <section className={styles.intro}>
+        <h2>Search results</h2>
         <div className={styles.gridContainer}>
           {data.length > 0 ? (
             data.map(({ kanji }, index) => (
@@ -27,7 +28,7 @@ export const KanjiSearchResult: React.FC<SearchResultsProps> = ({ data }) => {
             <div>No kanji found.</div>
           )}
         </div>
-      </div>
+      </section>
     </>
   );
 };

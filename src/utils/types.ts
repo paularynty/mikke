@@ -1,13 +1,3 @@
-// export type KanjiData = {
-//   kanji: {
-//     character: string;
-//     strokes: number | null;
-//     onyomi: string;
-//     kunyomi: string;
-//     meaning: string;
-//   };
-// };
-
 export type KanjiData = {
   kanji: {
     character: string;
@@ -21,11 +11,6 @@ export type KanjiData = {
 export type Input = {
   word: string;
 };
-
-export interface KanjiSearchResults {
-  kanji: string;
-  // radical: string;
-}
 
 export interface InputProps {
   input: Input;

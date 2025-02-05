@@ -2,14 +2,14 @@
 
 import KanjiSearch from "@/components/KanjiSearch/KanjiSearch";
 import { KanjiSearchResult } from "@/components/KanjiSearch/KanjiSearchResult";
-import { Input, KanjiSearchResults } from "@/utils/types";
-import { fetchKanjiSearchResults } from "@/lib/kanjiSearch";
+import { Input } from "@/utils/types";
+import { fetchKanjiSearchResult } from "@/lib/fetchKanjiSearchResult";
 import styles from "@/styles/page.module.css";
 import { useState, useEffect } from "react";
 import { useError } from "@/hooks/useError";
 
 export default function KanjiSearchPage() {
-  const [data, setData] = useState<KanjiSearchResults | null>(null);
+  const [data, setData] = useState<{ kanji: string }[] | null>(null);
   const [input, setInput] = useState<Input>({ word: "" });
   const { error, setErrorMessage } = useError();
   const [status, setStatus] = useState<
@@ -23,7 +23,7 @@ export default function KanjiSearchPage() {
     setErrorMessage("");
 
     try {
-      const resultData = await fetchKanjiSearchResults(input.word);
+      const resultData = await fetchKanjiSearchResult(input.word);
       setData(resultData);
       setStatus(resultData.length > 0 ? "success" : "error");
     } catch (error) {
@@ -52,9 +52,7 @@ export default function KanjiSearchPage() {
 
       {status === "success" && data ? <KanjiSearchResult data={data} /> : null}
 
-      {status === "error" && (
-        <p className={styles.error}>No kanji found.</p>
-      )}
+      {status === "error" && <p className={styles.error}>No kanji found.</p>}
     </>
   );
 }
