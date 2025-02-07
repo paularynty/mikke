@@ -1,6 +1,5 @@
-import { KanjiData } from "@/utils/types";
-
-export default async function fetchKanjiList(): Promise<KanjiData[]> {
+// export default async function fetchKanjiList(): Promise<KanjiData[]> {
+export const fetchKanjiList = async () => {
   try {
     const response = await fetch(
       "https://kanjialive-api.p.rapidapi.com/api/public/kanji/all/",

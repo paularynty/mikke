@@ -1,4 +1,4 @@
-import { fetchKanjiEntry } from "@/lib/kanjiEntry";
+import { fetchKanjiEntry } from "@/lib/fetchKanjiEntry";
 import styles from "@/styles/kanji.module.css";
 
 export default async function KanjiPage(props: {
