@@ -1,4 +1,4 @@
-# [Mikke!: Japanese Kanji app](https://mikke-kanji.vercel.app)
+# [Mikke! Japanese Kanji app](https://mikke-kanji.vercel.app)
 
 Mikke! (Japanese for "Found it!") is a quick, low-threshold tool for Japanese language learners. It allows lookup of kanji (Japanese character) by English word/meaning and provides detailed information on the respective kanji.
 
