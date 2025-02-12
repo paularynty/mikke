@@ -4,9 +4,9 @@ Mikke! (Japanese for "Found it!") is a quick, low-threshold tool for Japanese la
 
 ## Features
 
-🔍 Kanji search by English meaning
-📘 Detailed kanji information, including onyomi/kunyomi reading and stroke order
-📝 Comprehensive kanji list
+🔍 Kanji search by English meaning<br/>
+📘 Detailed kanji information, including onyomi/kunyomi reading and stroke order<br/>
+📝 Comprehensive kanji list<br/>
 
 The kanji database is kindly provided by [kanji alive](https://rapidapi.com/KanjiAlive/api/learn-to-read-and-write-japanese-kanji/).
 
