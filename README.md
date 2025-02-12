@@ -1,4 +1,4 @@
-# Mikke: Japanese Kanji app
+# [Mikke: Japanese Kanji app](https://mikke-kanji.vercel.app)
 
 Mikke is a quick, low-threshold way to look up kanji (Japanese characters/ideograms adapted from Chinese characters). The app is aimed at people with already some knowledge of kanji. App has been built with Next.js, React library and TypeScript.
 
