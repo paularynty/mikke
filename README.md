@@ -1,9 +1,15 @@
-# [Mikke: Japanese Kanji app](https://mikke-kanji.vercel.app)
+# [Mikke!: Japanese Kanji app](https://mikke-kanji.vercel.app)
 
-Mikke is a quick, low-threshold way to look up kanji (Japanese characters/ideograms adapted from Chinese characters). The app is aimed at people with already some knowledge of kanji. App has been built with Next.js, React library and TypeScript.
+Mikke! (Japanese for "Found it!") is a quick, low-threshold tool for Japanese language learners. It allows lookup of kanji (Japanese character) by English word/meaning and provides detailed information on the respective kanji.
 
-## Overview
+## Features
 
-The app allows kanji search by English word, as well as displays a full kanji list. By clicking on any kanji in the search result or list, various information about the respective kanji is displayed, such as meaning, onyomi/kunyomi (Chinese/Japanese) readings, and stroke count. 
+🔍 Kanji search by English meaning
+📘 Detailed kanji information, including onyomi/kunyomi reading and stroke order
+📝 Comprehensive kanji list
 
 The kanji database is kindly provided by [kanji alive](https://rapidapi.com/KanjiAlive/api/learn-to-read-and-write-japanese-kanji/).
+
+## Tech stack
+
+App has been built with Next.js, React library and TypeScript.
