@@ -19,10 +19,10 @@
   color: #9639a8;
 }
 
-.headerContentRight a {
+.headerContentStart a {
   margin-inline-end: 1.5rem;
 }
 
-.headerContentRight a:last-child {
+.headerContentStart a:last-child {
   margin-inline-end: 0;
 }

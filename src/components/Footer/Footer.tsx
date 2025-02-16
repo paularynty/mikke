@@ -9,7 +9,7 @@ export const Footer = () => {
       <a href="https://rapidapi.com/KanjiAlive/api/learn-to-read-and-write-japanese-kanji/">
         Kanji database
       </a>
-      <div className={styles.footerContentRight}>
+      <div className={styles.footerContentStart}>
         <select
           id="theme-dropdown"
           aria-label="Page theme"
