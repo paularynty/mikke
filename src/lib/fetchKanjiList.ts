@@ -21,7 +21,6 @@ export const fetchKanjiList = async () => {
       throw new Error("Unexpected data format: data is not an array");
     }
 
-    console.log("Fetch success");
     return data.map((item: any) => ({
       kanji: {
         character: item.kanji.character,
@@ -31,10 +30,8 @@ export const fetchKanjiList = async () => {
         meaning: item.kanji.meaning.english,
       },
     }));
-
-    // console.log("Formatted data", kanjiData);
   } catch (error) {
     console.error("Error fetching data:", error);
     throw error;
   }
-}
+};

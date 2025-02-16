@@ -5,12 +5,8 @@ export default async function KanjiPage(props: {
   params: Promise<{ character: string }>;
 }) {
   const params = await props.params;
-  console.log("param:", params.character);
-  const decoded = decodeURIComponent(params.character); // Decode the kanji character
-  console.log("param:", decoded);
-
+  const decoded = decodeURIComponent(params.character);
   const kanjiData = await fetchKanjiEntry(decoded);
-  console.log("kanjiDataArray:", kanjiData);
 
   return (
     <div className={styles.kanjiEntry}>

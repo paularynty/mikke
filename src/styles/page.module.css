@@ -115,6 +115,15 @@
   cursor: pointer;
 }
 
+.gridItemMeaning {
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+}
+
+.gridContainer a {
+  text-decoration: none;
+}
+
 .loading,
 .error {
   font-size: 1rem;

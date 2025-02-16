@@ -19,9 +19,6 @@ export const fetchKanjiEntry = async (character: string) => {
       throw new Error(`Error fetching data: ${response.statusText}`);
     }
     const data = await response.json();
-    console.log("data:", data);
-
-    console.log("Fetch success");
 
     const kanjiData: KanjiData["kanji"] | undefined = data?.kanji;
     const kanjiCharacter: string = kanjiData?.character ?? "";
